@@ -37,7 +37,7 @@ function Box({ color, size, scale, children, ...props }) {
 function Floor(props) {
   return (
     <mesh {...props} rotation={[-Math.PI / 2, 0, 0]}>
-      <planeGeometry args={[4, 4]} />
+      <planeGeometry args={[8, 8]} />
       <meshStandardMaterial color="#808080" roughness={1} metalness={0} />
     </mesh>
   )
@@ -55,12 +55,12 @@ export function VRScene() {
         <Box
           key={i}
           color={`hsl(${Math.random() * 360}, 100%, 75%)`}
-          size={[0.15, 0.15, 0.15]}
+          size={[0.4, 0.4, 0.4]}
           scale={1}
           position={[
-            Math.random() * 2 - 1,
-            Math.random() * 2,
-            Math.random() * 2 - 1
+            Math.random() * 4 - 2,
+            Math.random() * 2 + 1,
+            Math.random() * 4 - 2
           ]}
         />
       ))}
