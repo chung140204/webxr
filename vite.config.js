@@ -1,9 +1,13 @@
-import fs from 'fs';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-export default {
+export default defineConfig({
+    plugins: [react()],
     base: '/webxr/',
+    build: {
+        outDir: 'dist'
+    },
     server: {
         https: false
     }
-} 
+}) 
